@@ -1,0 +1,181 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Ben Eater 6502 - Stage 1"
+Date "2021-03-22"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 "Stephen Thirlwall"
+$EndDescr
+$Comp
+L power:+5V #PWR0101
+U 1 1 605844E0
+P 1325 6950
+F 0 "#PWR0101" H 1325 6800 50  0001 C CNN
+F 1 "+5V" H 1340 7123 50  0000 C CNN
+F 2 "" H 1325 6950 50  0001 C CNN
+F 3 "" H 1325 6950 50  0001 C CNN
+	1    1325 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 605862DE
+P 1325 7275
+F 0 "#PWR0102" H 1325 7025 50  0001 C CNN
+F 1 "GND" H 1330 7102 50  0000 C CNN
+F 2 "" H 1325 7275 50  0001 C CNN
+F 3 "" H 1325 7275 50  0001 C CNN
+	1    1325 7275
+	1    0    0    -1  
+$EndComp
+Text GLabel 1200 6950 0    50   Input ~ 0
+H
+Text GLabel 1200 7275 0    50   Input ~ 0
+L
+Wire Wire Line
+	1200 7275 1325 7275
+Wire Wire Line
+	1200 6950 1325 6950
+NoConn ~ 1150 3775
+NoConn ~ 1150 3675
+NoConn ~ 1150 3175
+NoConn ~ 1150 3575
+NoConn ~ 1150 2175
+NoConn ~ 1150 2075
+$Comp
+L 65xx:W65C02SxP U1
+U 1 1 60582DCA
+P 1750 2875
+F 0 "U1" H 1750 3075 50  0000 C CNN
+F 1 "W65C02SxP" H 1750 3000 50  0000 C CIB
+F 2 "" H 1750 4875 50  0001 C CNN
+F 3 "http://www.westerndesigncenter.com/wdc/documentation/w65c02s.pdf" H 1750 4775 50  0001 C CNN
+	1    1750 2875
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW1
+U 1 1 6058FD77
+P 950 1675
+F 0 "SW1" H 950 1960 50  0000 C CNN
+F 1 "Reset" H 950 1869 50  0000 C CNN
+F 2 "" H 950 1875 50  0001 C CNN
+F 3 "~" H 950 1875 50  0001 C CNN
+	1    950  1675
+	1    0    0    -1  
+$EndComp
+Text GLabel 700  1675 0    50   Input ~ 0
+L
+Text GLabel 1150 1250 0    50   Input ~ 0
+H
+$Comp
+L Device:R R1
+U 1 1 605910CF
+P 1150 1475
+F 0 "R1" H 1220 1521 50  0000 L CNN
+F 1 "R" H 1220 1430 50  0000 L CNN
+F 2 "" V 1080 1475 50  0001 C CNN
+F 3 "~" H 1150 1475 50  0001 C CNN
+	1    1150 1475
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 1250 1150 1325
+Wire Wire Line
+	1150 1625 1150 1675
+Connection ~ 1150 1675
+Text GLabel 1150 1975 0    50   Input ~ 0
+CLOCK
+Text GLabel 1150 2475 0    50   Input ~ 0
+H
+Text GLabel 1150 2575 0    50   Input ~ 0
+H
+Text GLabel 1150 3275 0    50   Input ~ 0
+H
+Text GLabel 1150 4075 0    50   Input ~ 0
+H
+$Comp
+L power:+5V #PWR01
+U 1 1 6059251C
+P 1750 1325
+F 0 "#PWR01" H 1750 1175 50  0001 C CNN
+F 1 "+5V" H 1765 1498 50  0000 C CNN
+F 2 "" H 1750 1325 50  0001 C CNN
+F 3 "" H 1750 1325 50  0001 C CNN
+	1    1750 1325
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 60592C3F
+P 1750 4425
+F 0 "#PWR02" H 1750 4175 50  0001 C CNN
+F 1 "GND" H 1755 4252 50  0000 C CNN
+F 2 "" H 1750 4425 50  0001 C CNN
+F 3 "" H 1750 4425 50  0001 C CNN
+	1    1750 4425
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1150 2875
+NoConn ~ 2350 1675
+NoConn ~ 2350 1775
+NoConn ~ 2350 1875
+NoConn ~ 2350 1975
+NoConn ~ 2350 2075
+NoConn ~ 2350 2175
+NoConn ~ 2350 2275
+NoConn ~ 2350 2375
+NoConn ~ 2350 2475
+NoConn ~ 2350 2575
+NoConn ~ 2350 2675
+NoConn ~ 2350 2775
+NoConn ~ 2350 2875
+NoConn ~ 2350 2975
+NoConn ~ 2350 3075
+NoConn ~ 2350 3175
+NoConn ~ 2350 3375
+NoConn ~ 2350 3475
+NoConn ~ 2350 3575
+NoConn ~ 2350 3675
+NoConn ~ 2350 3775
+NoConn ~ 2350 3875
+NoConn ~ 2350 3975
+NoConn ~ 2350 4075
+$Comp
+L power:GNDPWR #PWR0103
+U 1 1 605A88B4
+P 1475 7275
+F 0 "#PWR0103" H 1475 7075 50  0001 C CNN
+F 1 "GNDPWR" V 1480 7167 50  0000 R CNN
+F 2 "" H 1475 7225 50  0001 C CNN
+F 3 "" H 1475 7225 50  0001 C CNN
+	1    1475 7275
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 605AA4E6
+P 1475 6950
+F 0 "#FLG0101" H 1475 7025 50  0001 C CNN
+F 1 "PWR_FLAG" V 1475 7078 50  0000 L CNN
+F 2 "" H 1475 6950 50  0001 C CNN
+F 3 "~" H 1475 6950 50  0001 C CNN
+	1    1475 6950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1475 6950 1325 6950
+Connection ~ 1325 6950
+Wire Wire Line
+	1475 7275 1325 7275
+Connection ~ 1325 7275
+Wire Wire Line
+	750  1675 700  1675
+$EndSCHEMATC
