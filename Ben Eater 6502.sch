@@ -4,7 +4,7 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "Ben Eater 6502 - Stage 2"
+Title "Ben Eater 6502 - Stage 3"
 Date "2021-03-22"
 Rev ""
 Comp ""
@@ -577,21 +577,10 @@ d7
 Wire Wire Line
 	5025 4200 5225 4200
 NoConn ~ 5225 3000
-NoConn ~ 6425 4500
-NoConn ~ 6425 4600
 NoConn ~ 6425 4800
 NoConn ~ 6425 4900
-NoConn ~ 6425 4400
-NoConn ~ 6425 4300
-NoConn ~ 6425 4200
-NoConn ~ 6425 4100
-NoConn ~ 6425 4000
-NoConn ~ 6425 3900
 NoConn ~ 6425 3700
 NoConn ~ 6425 3600
-NoConn ~ 6425 3400
-NoConn ~ 6425 3300
-NoConn ~ 6425 3200
 NoConn ~ 6425 3100
 NoConn ~ 6425 3000
 NoConn ~ 6425 2900
@@ -748,6 +737,114 @@ Text GLabel 1150 2275 0    50   Input ~ 0
 H
 Wire Wire Line
 	1200 2275 1150 2275
+$Comp
+L Display_Character:WC1602A DS1
+U 1 1 6067F661
+P 7250 4000
+F 0 "DS1" H 7250 4075 50  0000 C CNN
+F 1 "WC1602A" H 7250 4000 50  0000 C CNN
+F 2 "Display:WC1602A" H 7250 3100 50  0001 C CIN
+F 3 "http://www.wincomlcd.com/pdf/WC1602A-SFYLYHTC06.pdf" H 7950 4000 50  0001 C CNN
+	1    7250 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6425 4600 6850 4600
+$Comp
+L power:GND #PWR08
+U 1 1 6069A086
+P 7250 4850
+F 0 "#PWR08" H 7250 4600 50  0001 C CNN
+F 1 "GND" H 7255 4677 50  0000 C CNN
+F 2 "" H 7250 4850 50  0001 C CNN
+F 3 "" H 7250 4850 50  0001 C CNN
+	1    7250 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR07
+U 1 1 6069A578
+P 7250 3150
+F 0 "#PWR07" H 7250 3000 50  0001 C CNN
+F 1 "+5V" H 7265 3323 50  0000 C CNN
+F 2 "" H 7250 3150 50  0001 C CNN
+F 3 "" H 7250 3150 50  0001 C CNN
+	1    7250 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6425 4500 6850 4500
+Wire Wire Line
+	6850 4400 6425 4400
+Wire Wire Line
+	6425 4300 6850 4300
+Wire Wire Line
+	6850 4200 6425 4200
+Wire Wire Line
+	6425 4100 6850 4100
+Wire Wire Line
+	6850 4000 6425 4000
+Wire Wire Line
+	6425 3900 6850 3900
+Wire Wire Line
+	7250 4825 7750 4825
+Wire Wire Line
+	7750 4825 7750 3800
+Wire Wire Line
+	7750 3800 7650 3800
+$Comp
+L Device:R_POT RV1
+U 1 1 606C4510
+P 7875 3400
+F 0 "RV1" H 7805 3446 50  0000 R CNN
+F 1 "R_POT" H 7805 3355 50  0000 R CNN
+F 2 "" H 7875 3400 50  0001 C CNN
+F 3 "~" H 7875 3400 50  0001 C CNN
+	1    7875 3400
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 3400 7725 3400
+Wire Wire Line
+	7875 3550 7875 3800
+Wire Wire Line
+	7875 3800 7750 3800
+Connection ~ 7750 3800
+Wire Wire Line
+	7650 3700 7700 3700
+Wire Wire Line
+	7700 3700 7700 3175
+Wire Wire Line
+	7700 3175 7875 3175
+Wire Wire Line
+	7875 3175 7875 3250
+Wire Wire Line
+	7700 3175 7250 3175
+Wire Wire Line
+	7250 3175 7250 3200
+Connection ~ 7700 3175
+Wire Wire Line
+	7250 3150 7250 3175
+Connection ~ 7250 3175
+Wire Wire Line
+	7250 4850 7250 4825
+Connection ~ 7250 4825
+Wire Wire Line
+	7250 4825 7250 4800
+Wire Wire Line
+	6425 3400 6850 3400
+Wire Wire Line
+	6425 3300 6775 3300
+Wire Wire Line
+	6775 3300 6775 3500
+Wire Wire Line
+	6775 3500 6850 3500
+Wire Wire Line
+	6425 3200 6700 3200
+Wire Wire Line
+	6700 3200 6700 3600
+Wire Wire Line
+	6700 3600 6850 3600
 Wire Bus Line
 	4925 2025 4925 3700
 Wire Bus Line
