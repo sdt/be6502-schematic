@@ -4,7 +4,7 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "Ben Eater 6502 - Stage 6"
+Title "Ben Eater 6502 - Stage 6a"
 Date "2021-03-22"
 Rev ""
 Comp ""
@@ -16,33 +16,33 @@ $EndDescr
 $Comp
 L power:+5V #PWR0101
 U 1 1 605844E0
-P 1325 6950
-F 0 "#PWR0101" H 1325 6800 50  0001 C CNN
-F 1 "+5V" H 1340 7123 50  0000 C CNN
-F 2 "" H 1325 6950 50  0001 C CNN
-F 3 "" H 1325 6950 50  0001 C CNN
-	1    1325 6950
+P 1275 6000
+F 0 "#PWR0101" H 1275 5850 50  0001 C CNN
+F 1 "+5V" H 1290 6173 50  0000 C CNN
+F 2 "" H 1275 6000 50  0001 C CNN
+F 3 "" H 1275 6000 50  0001 C CNN
+	1    1275 6000
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0102
 U 1 1 605862DE
-P 1325 7275
-F 0 "#PWR0102" H 1325 7025 50  0001 C CNN
-F 1 "GND" H 1330 7102 50  0000 C CNN
-F 2 "" H 1325 7275 50  0001 C CNN
-F 3 "" H 1325 7275 50  0001 C CNN
-	1    1325 7275
+P 1275 7425
+F 0 "#PWR0102" H 1275 7175 50  0001 C CNN
+F 1 "GND" H 1280 7252 50  0000 C CNN
+F 2 "" H 1275 7425 50  0001 C CNN
+F 3 "" H 1275 7425 50  0001 C CNN
+	1    1275 7425
 	1    0    0    -1  
 $EndComp
-Text GLabel 1200 6950 0    50   Input ~ 0
+Text GLabel 1150 6000 0    50   Input ~ 0
 H
-Text GLabel 1200 7275 0    50   Input ~ 0
+Text GLabel 1150 7425 0    50   Input ~ 0
 L
 Wire Wire Line
-	1200 7275 1325 7275
+	1150 7425 1275 7425
 Wire Wire Line
-	1200 6950 1325 6950
+	1150 6000 1275 6000
 NoConn ~ 2100 3800
 NoConn ~ 2100 3700
 NoConn ~ 2100 3600
@@ -107,31 +107,26 @@ $EndComp
 $Comp
 L power:GNDPWR #PWR0103
 U 1 1 605A88B4
-P 1475 7275
-F 0 "#PWR0103" H 1475 7075 50  0001 C CNN
-F 1 "GNDPWR" V 1480 7167 50  0000 R CNN
-F 2 "" H 1475 7225 50  0001 C CNN
-F 3 "" H 1475 7225 50  0001 C CNN
-	1    1475 7275
-	0    -1   -1   0   
+P 1125 7250
+F 0 "#PWR0103" H 1125 7050 50  0001 C CNN
+F 1 "GNDPWR" V 1130 7142 50  0000 R CNN
+F 2 "" H 1125 7200 50  0001 C CNN
+F 3 "" H 1125 7200 50  0001 C CNN
+	1    1125 7250
+	0    1    1    0   
 $EndComp
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 605AA4E6
-P 1475 6950
-F 0 "#FLG0101" H 1475 7025 50  0001 C CNN
-F 1 "PWR_FLAG" V 1475 7078 50  0000 L CNN
-F 2 "" H 1475 6950 50  0001 C CNN
-F 3 "~" H 1475 6950 50  0001 C CNN
-	1    1475 6950
-	0    1    1    0   
+P 1125 6175
+F 0 "#FLG0101" H 1125 6250 50  0001 C CNN
+F 1 "PWR_FLAG" V 1125 6303 50  0000 L CNN
+F 2 "" H 1125 6175 50  0001 C CNN
+F 3 "~" H 1125 6175 50  0001 C CNN
+	1    1125 6175
+	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	1475 6950 1325 6950
-Connection ~ 1325 6950
-Wire Wire Line
-	1475 7275 1325 7275
-Connection ~ 1325 7275
+Connection ~ 1275 6000
 Wire Wire Line
 	1700 1700 1650 1700
 Connection ~ 2100 1700
@@ -763,8 +758,6 @@ Wire Wire Line
 Wire Wire Line
 	1950 5500 5350 5500
 Wire Wire Line
-	1900 5550 7575 5550
-Wire Wire Line
 	1850 2000 1850 5600
 Wire Wire Line
 	1850 5600 4550 5600
@@ -1086,48 +1079,24 @@ Wire Wire Line
 $Comp
 L Connector:Conn_01x04_Female J1
 U 1 1 609D12F5
-P 10325 3725
-F 0 "J1" H 10125 3925 50  0000 L CNN
-F 1 "PS/2 Keyboard" H 10100 3425 50  0000 L CNN
-F 2 "" H 10325 3725 50  0001 C CNN
-F 3 "~" H 10325 3725 50  0001 C CNN
-	1    10325 3725
-	1    0    0    -1  
+P 9000 4975
+F 0 "J1" H 8800 5175 50  0000 L CNN
+F 1 "PS/2 Keyboard" H 8775 4675 50  0000 L CNN
+F 2 "" H 9000 4975 50  0001 C CNN
+F 3 "~" H 9000 4975 50  0001 C CNN
+	1    9000 4975
+	-1   0    0    -1  
 $EndComp
-Text Notes 10350 3650 0    50   ~ 0
+Text Notes 8975 4900 2    50   ~ 0
 5V
-Text Notes 10350 3750 0    50   ~ 0
+Text Notes 8975 5000 2    50   ~ 0
 GND
-Text Notes 10350 3850 0    50   ~ 0
+Text Notes 8975 5100 2    50   ~ 0
 CLK
-Text Notes 10350 3950 0    50   ~ 0
+Text Notes 8975 5200 2    50   ~ 0
 DATA
-$Comp
-L 4xxx:4011 U2
-U 4 1 609D6CCB
-P 9725 4450
-F 0 "U2" H 9725 4775 50  0000 C CNN
-F 1 "4011" H 9725 4684 50  0000 C CNN
-F 2 "" H 9725 4450 50  0001 C CNN
-F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4011bms-12bms-23bms.pdf" H 9725 4450 50  0001 C CNN
-	4    9725 4450
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	10025 4550 10025 4350
-Wire Wire Line
-	10025 3825 10125 3825
-Connection ~ 10025 4350
-Wire Wire Line
-	10025 4350 10025 3825
-Wire Wire Line
-	9425 4450 9425 3800
 Wire Wire Line
 	9425 3800 9350 3800
-Wire Wire Line
-	9350 3900 9350 3925
-Wire Wire Line
-	9350 3925 10125 3925
 Wire Wire Line
 	9350 3500 9425 3500
 Wire Wire Line
@@ -1140,31 +1109,25 @@ NoConn ~ 9350 3200
 $Comp
 L power:GND #PWR012
 U 1 1 60A598A8
-P 9825 3700
-F 0 "#PWR012" H 9825 3450 50  0001 C CNN
-F 1 "GND" H 9830 3527 50  0000 C CNN
-F 2 "" H 9825 3700 50  0001 C CNN
-F 3 "" H 9825 3700 50  0001 C CNN
-	1    9825 3700
-	1    0    0    -1  
+P 9300 5325
+F 0 "#PWR012" H 9300 5075 50  0001 C CNN
+F 1 "GND" H 9305 5152 50  0000 C CNN
+F 2 "" H 9300 5325 50  0001 C CNN
+F 3 "" H 9300 5325 50  0001 C CNN
+	1    9300 5325
+	-1   0    0    -1  
 $EndComp
 $Comp
 L power:+5V #PWR011
 U 1 1 60A5A359
-P 9825 3625
-F 0 "#PWR011" H 9825 3475 50  0001 C CNN
-F 1 "+5V" H 9840 3798 50  0000 C CNN
-F 2 "" H 9825 3625 50  0001 C CNN
-F 3 "" H 9825 3625 50  0001 C CNN
-	1    9825 3625
-	1    0    0    -1  
+P 9300 4675
+F 0 "#PWR011" H 9300 4525 50  0001 C CNN
+F 1 "+5V" H 9315 4848 50  0000 C CNN
+F 2 "" H 9300 4675 50  0001 C CNN
+F 3 "" H 9300 4675 50  0001 C CNN
+	1    9300 4675
+	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	9825 3625 10125 3625
-Wire Wire Line
-	9825 3700 10125 3700
-Wire Wire Line
-	10125 3700 10125 3725
 Wire Wire Line
 	750  2150 1550 2150
 Wire Wire Line
@@ -1179,6 +1142,164 @@ Wire Wire Line
 	7775 5650 7775 2000
 Wire Wire Line
 	8150 2000 7775 2000
+NoConn ~ 4650 6700
+Text GLabel 2925 6650 0    50   Input ~ 0
+H
+Wire Wire Line
+	3875 6600 4050 6600
+Wire Wire Line
+	4050 6600 4050 6800
+Connection ~ 4050 6600
+$Comp
+L 74xx:74HC74 U6
+U 1 1 609651D6
+P 9875 5175
+F 0 "U6" H 9875 5656 50  0000 C CNN
+F 1 "74HC74" H 9875 5565 50  0000 C CNN
+F 2 "" H 9875 5175 50  0001 C CNN
+F 3 "74xx/74hc_hct74.pdf" H 9875 5175 50  0001 C CNN
+	1    9875 5175
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9200 4875 9300 4875
+Wire Wire Line
+	9300 4875 9300 4675
+Wire Wire Line
+	9200 4975 9300 4975
+Wire Wire Line
+	9300 4975 9300 5325
+Wire Wire Line
+	9200 5075 9575 5075
+Wire Wire Line
+	9200 5175 9425 5175
+Wire Wire Line
+	9425 3800 9425 5175
+Wire Wire Line
+	7625 5600 9575 5600
+Wire Wire Line
+	9575 5600 9575 5175
+Connection ~ 7625 5600
+Wire Wire Line
+	9350 3900 10325 3900
+Wire Wire Line
+	10325 3900 10325 5275
+Wire Wire Line
+	10325 5275 10175 5275
+Wire Wire Line
+	10400 5550 10400 4875
+Wire Wire Line
+	10400 4875 9875 4875
+Wire Wire Line
+	1900 5550 7575 5550
+Connection ~ 7575 5550
+Wire Wire Line
+	7575 5550 10400 5550
+Text GLabel 9975 5475 2    50   Input ~ 0
+H
+Wire Wire Line
+	9875 5475 9975 5475
+NoConn ~ 10175 5075
+$Comp
+L 4xxx:4011 U2
+U 4 1 609D6CCB
+P 4350 6700
+F 0 "U2" H 4350 7025 50  0000 C CNN
+F 1 "4011" H 4350 6934 50  0000 C CNN
+F 2 "" H 4350 6700 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4011bms-12bms-23bms.pdf" H 4350 6700 50  0001 C CNN
+	4    4350 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC74 U6
+U 2 1 60A9A487
+P 5250 6725
+F 0 "U6" H 5250 7206 50  0000 C CNN
+F 1 "74HC74" H 5250 7115 50  0000 C CNN
+F 2 "" H 5250 6725 50  0001 C CNN
+F 3 "74xx/74hc_hct74.pdf" H 5250 6725 50  0001 C CNN
+	2    5250 6725
+	1    0    0    -1  
+$EndComp
+Text GLabel 4875 6225 2    50   Input ~ 0
+H
+Wire Wire Line
+	4875 6225 4825 6225
+Wire Wire Line
+	4825 6225 4825 6425
+Wire Wire Line
+	4825 7075 5250 7075
+Wire Wire Line
+	5250 7075 5250 7025
+Wire Wire Line
+	5250 6425 4825 6425
+Connection ~ 4825 6425
+Wire Wire Line
+	4825 6425 4825 6625
+Wire Wire Line
+	4950 6625 4825 6625
+Connection ~ 4825 6625
+Wire Wire Line
+	4825 6625 4825 6725
+Wire Wire Line
+	4950 6725 4825 6725
+Connection ~ 4825 6725
+Wire Wire Line
+	4825 6725 4825 7075
+NoConn ~ 5550 6625
+NoConn ~ 5550 6825
+$Comp
+L 4xxx:4011 U2
+U 5 1 60AFE34C
+P 1950 6450
+F 0 "U2" V 1583 6450 50  0000 C CNN
+F 1 "4011" V 1674 6450 50  0000 C CNN
+F 2 "" H 1950 6450 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4011bms-12bms-23bms.pdf" H 1950 6450 50  0001 C CNN
+	5    1950 6450
+	0    1    1    0   
+$EndComp
+$Comp
+L 74xx:74HC74 U?
+U 3 1 60B009B5
+P 1950 7075
+F 0 "U?" V 1583 7075 50  0000 C CNN
+F 1 "74HC74" V 1674 7075 50  0000 C CNN
+F 2 "" H 1950 7075 50  0001 C CNN
+F 3 "74xx/74hc_hct74.pdf" H 1950 7075 50  0001 C CNN
+	3    1950 7075
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1450 6450 1275 6450
+Wire Wire Line
+	1275 6450 1275 7075
+Wire Wire Line
+	1275 7075 1550 7075
+Wire Wire Line
+	2450 6450 2700 6450
+Wire Wire Line
+	2700 6450 2700 7075
+Wire Wire Line
+	2700 7075 2350 7075
+Wire Wire Line
+	1275 6450 1275 6175
+Connection ~ 1275 6450
+Wire Wire Line
+	1275 7075 1275 7250
+Connection ~ 1275 7075
+Connection ~ 1275 7425
+Wire Wire Line
+	1125 7250 1275 7250
+Connection ~ 1275 7250
+Wire Wire Line
+	1275 7250 1275 7425
+Wire Wire Line
+	1125 6175 1275 6175
+Connection ~ 1275 6175
+Wire Wire Line
+	1275 6175 1275 6000
 Wire Bus Line
 	7850 1025 7850 2700
 Wire Bus Line
@@ -1195,4 +1316,8 @@ Wire Bus Line
 	3950 1025 3950 3050
 Wire Bus Line
 	3600 1025 3600 3100
+Text Notes 825  6700 0    50   ~ 0
+Power
+Text Notes 4025 6175 0    50   ~ 0
+Unused
 $EndSCHEMATC
