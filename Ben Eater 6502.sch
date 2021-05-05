@@ -1096,12 +1096,7 @@ CLK
 Text Notes 8975 5200 2    50   ~ 0
 DATA
 Wire Wire Line
-	9425 3800 9350 3800
-Wire Wire Line
-	9350 3500 9425 3500
-Wire Wire Line
-	9425 3500 9425 3800
-Connection ~ 9425 3800
+	9425 3900 9350 3900
 NoConn ~ 9350 3600
 NoConn ~ 9350 3400
 NoConn ~ 9350 3300
@@ -1174,16 +1169,12 @@ Wire Wire Line
 Wire Wire Line
 	9200 5175 9425 5175
 Wire Wire Line
-	9425 3800 9425 5175
+	9425 3900 9425 5175
 Wire Wire Line
 	7625 5600 9575 5600
 Wire Wire Line
 	9575 5600 9575 5175
 Connection ~ 7625 5600
-Wire Wire Line
-	9350 3900 10325 3900
-Wire Wire Line
-	10325 3900 10325 5275
 Wire Wire Line
 	10325 5275 10175 5275
 Wire Wire Line
@@ -1199,7 +1190,6 @@ Text GLabel 9975 5475 2    50   Input ~ 0
 H
 Wire Wire Line
 	9875 5475 9975 5475
-NoConn ~ 10175 5075
 $Comp
 L 4xxx:4011 U2
 U 4 1 609D6CCB
@@ -1261,10 +1251,10 @@ F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4011bms-12bms
 	0    1    1    0   
 $EndComp
 $Comp
-L 74xx:74HC74 U?
+L 74xx:74HC74 U6
 U 3 1 60B009B5
 P 1950 7075
-F 0 "U?" V 1583 7075 50  0000 C CNN
+F 0 "U6" V 1583 7075 50  0000 C CNN
 F 1 "74HC74" V 1674 7075 50  0000 C CNN
 F 2 "" H 1950 7075 50  0001 C CNN
 F 3 "74xx/74hc_hct74.pdf" H 1950 7075 50  0001 C CNN
@@ -1300,6 +1290,20 @@ Wire Wire Line
 Connection ~ 1275 6175
 Wire Wire Line
 	1275 6175 1275 6000
+Text Notes 825  6700 0    50   ~ 0
+Power
+Text Notes 4025 6175 0    50   ~ 0
+Unused
+Wire Wire Line
+	10325 3800 10325 5275
+Wire Wire Line
+	9350 3800 10325 3800
+Wire Wire Line
+	10250 3500 10250 5075
+Wire Wire Line
+	10250 5075 10175 5075
+Wire Wire Line
+	9350 3500 10250 3500
 Wire Bus Line
 	7850 1025 7850 2700
 Wire Bus Line
@@ -1316,8 +1320,5 @@ Wire Bus Line
 	3950 1025 3950 3050
 Wire Bus Line
 	3600 1025 3600 3100
-Text Notes 825  6700 0    50   ~ 0
-Power
-Text Notes 4025 6175 0    50   ~ 0
-Unused
+Connection ~ 5500 7600
 $EndSCHEMATC
