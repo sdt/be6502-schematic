@@ -4,7 +4,7 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "Ben Eater 6502 - Stage 6a"
+Title "Ben Eater 6502 - Stage 6c"
 Date "2021-03-22"
 Rev ""
 Comp ""
@@ -1097,7 +1097,6 @@ Text Notes 8975 5200 2    50   ~ 0
 DATA
 Wire Wire Line
 	9425 3900 9350 3900
-NoConn ~ 9350 3600
 NoConn ~ 9350 3400
 NoConn ~ 9350 3300
 NoConn ~ 9350 3200
@@ -1165,7 +1164,7 @@ Wire Wire Line
 Wire Wire Line
 	9300 4975 9300 5325
 Wire Wire Line
-	9200 5075 9575 5075
+	9200 5075 9500 5075
 Wire Wire Line
 	9200 5175 9425 5175
 Wire Wire Line
@@ -1304,6 +1303,10 @@ Wire Wire Line
 	10250 5075 10175 5075
 Wire Wire Line
 	9350 3500 10250 3500
+Wire Wire Line
+	9350 3600 9500 3600
+Wire Wire Line
+	9500 3600 9500 5075
 Wire Bus Line
 	7850 1025 7850 2700
 Wire Bus Line
@@ -1320,5 +1323,7 @@ Wire Bus Line
 	3950 1025 3950 3050
 Wire Bus Line
 	3600 1025 3600 3100
-Connection ~ 5500 7600
+Connection ~ 9500 5075
+Wire Wire Line
+	9500 5075 9575 5075
 $EndSCHEMATC
