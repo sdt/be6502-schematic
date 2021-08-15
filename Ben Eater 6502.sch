@@ -4,7 +4,7 @@ EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 1
-Title "Ben Eater 6502 - Stage 6c"
+Title "Ben Eater 6502 - Stage 7"
 Date "2021-03-22"
 Rev ""
 Comp ""
@@ -21,15 +21,15 @@ NoConn ~ 3700 2225
 $Comp
 L Switch:SW_Push SW1
 U 1 1 6058FD77
-P 3500 1825
-F 0 "SW1" H 3500 2110 50  0000 C CNN
-F 1 "Reset" H 3500 2019 50  0000 C CNN
-F 2 "" H 3500 2025 50  0001 C CNN
-F 3 "~" H 3500 2025 50  0001 C CNN
-	1    3500 1825
+P 3275 1825
+F 0 "SW1" H 3275 2110 50  0000 C CNN
+F 1 "Reset" H 3275 2019 50  0000 C CNN
+F 2 "" H 3275 2025 50  0001 C CNN
+F 3 "~" H 3275 2025 50  0001 C CNN
+	1    3275 1825
 	1    0    0    -1  
 $EndComp
-Text GLabel 3250 1825 0    50   Input ~ 0
+Text GLabel 2925 1825 0    50   Input ~ 0
 L
 $Comp
 L Device:R R1
@@ -48,9 +48,7 @@ Wire Wire Line
 	3700 1775 3700 1825
 Text GLabel 3300 2125 0    50   Input ~ 0
 CLOCK
-Text GLabel 3700 3425 0    50   Input ~ 0
-H
-Text GLabel 3700 4225 0    50   Input ~ 0
+Text GLabel 3725 4075 2    50   Input ~ 0
 H
 $Comp
 L power:+5V #PWR01
@@ -74,8 +72,6 @@ F 3 "" H 4300 4575 50  0001 C CNN
 	1    4300 4575
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3300 1825 3250 1825
 Connection ~ 3700 1825
 $Comp
 L 4xxx:4011 U2
@@ -279,7 +275,7 @@ Text Label 7750 2775 0    50   ~ 0
 a10
 Text Label 7750 2875 0    50   ~ 0
 a11
-Text Label 8125 3875 2    50   ~ 0
+Text Label 8125 4100 2    50   ~ 0
 ~a15
 Entry Wire Line
 	5100 3525 5200 3625
@@ -595,12 +591,8 @@ Wire Wire Line
 	7900 3575 7900 4100
 Wire Wire Line
 	7900 4100 8175 4100
-Text GLabel 3075 2950 0    50   Input ~ 0
+Text GLabel 2950 3325 0    50   Input ~ 0
 H
-Wire Wire Line
-	3125 3025 3125 2950
-Wire Wire Line
-	3125 2950 3075 2950
 Text GLabel 3650 1400 0    50   Input ~ 0
 H
 Wire Wire Line
@@ -940,17 +932,6 @@ Connection ~ 7175 5400
 Wire Bus Line
 	7175 5400 9050 5400
 $Comp
-L Device:R R2
-U 1 1 6069021B
-P 3125 3175
-F 0 "R2" H 3195 3221 50  0000 L CNN
-F 1 "R" H 3195 3130 50  0000 L CNN
-F 2 "" V 3055 3175 50  0001 C CNN
-F 3 "~" H 3125 3175 50  0001 C CNN
-	1    3125 3175
-	1    0    0    -1  
-$EndComp
-$Comp
 L Switch:SW_Push SW2
 U 1 1 608BCB11
 P 3100 2725
@@ -1063,8 +1044,6 @@ $EndComp
 Wire Wire Line
 	2925 2275 3300 2275
 Wire Wire Line
-	3125 3325 3700 3325
-Wire Wire Line
 	3700 2625 3400 2625
 Wire Wire Line
 	3400 2625 3400 5775
@@ -1111,7 +1090,7 @@ Wire Wire Line
 Wire Wire Line
 	12000 5000 11475 5000
 Wire Wire Line
-	3500 5675 9175 5675
+	3500 5675 4950 5675
 Connection ~ 9175 5675
 Wire Wire Line
 	9175 5675 12000 5675
@@ -1321,440 +1300,530 @@ Wire Notes Line
 $Comp
 L MCU_Module:Arduino_Nano_v3.x A1
 U 1 1 612B0241
-P 4150 7200
-F 0 "A1" H 4150 7200 50  0000 C CNN
-F 1 "Arduino_Nano_v3.x" H 4125 7890 50  0000 C CNN
-F 2 "Module:Arduino_Nano" H 4150 7200 50  0001 C CIN
-F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 4150 7200 50  0001 C CNN
-	1    4150 7200
+P 4050 7200
+F 0 "A1" H 4050 7200 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 4025 7890 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 4050 7200 50  0001 C CIN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 4050 7200 50  0001 C CNN
+	1    4050 7200
 	-1   0    0    -1  
 $EndComp
 Connection ~ 3300 2725
 Entry Wire Line
-	4850 6800 4950 6700
-Text Label 4700 6800 0    50   ~ 0
+	4750 6800 4850 6700
+Text Label 4600 6800 0    50   ~ 0
 d2
-Text Label 4700 6900 0    50   ~ 0
+Text Label 4600 6900 0    50   ~ 0
 d3
-Text Label 4700 7000 0    50   ~ 0
+Text Label 4600 7000 0    50   ~ 0
 d4
-Text Label 4700 7100 0    50   ~ 0
+Text Label 4600 7100 0    50   ~ 0
 d5
-Text Label 4700 7200 0    50   ~ 0
+Text Label 4600 7200 0    50   ~ 0
 d6
-Text Label 4700 7300 0    50   ~ 0
+Text Label 4600 7300 0    50   ~ 0
 d7
 Wire Wire Line
-	4650 7300 4850 7300
+	4550 7300 4750 7300
 Wire Wire Line
-	4850 7200 4650 7200
+	4750 7200 4550 7200
 Wire Wire Line
-	4650 7100 4850 7100
+	4550 7100 4750 7100
 Wire Wire Line
-	4850 7000 4650 7000
+	4750 7000 4550 7000
 Wire Wire Line
-	4650 6900 4850 6900
+	4550 6900 4750 6900
 Wire Wire Line
-	4850 6800 4650 6800
+	4750 6800 4550 6800
 Entry Wire Line
-	4850 6900 4950 6800
+	4750 6900 4850 6800
 Entry Wire Line
-	4850 7000 4950 6900
+	4750 7000 4850 6900
 Entry Wire Line
-	4850 7100 4950 7000
+	4750 7100 4850 7000
 Entry Wire Line
-	4850 7200 4950 7100
+	4750 7200 4850 7100
 Entry Wire Line
-	4850 7300 4950 7200
+	4750 7300 4850 7200
 Wire Wire Line
-	4650 7500 4850 7500
+	4550 7500 4750 7500
 Wire Wire Line
-	4850 7400 4650 7400
+	4750 7400 4550 7400
 Entry Wire Line
-	4850 7400 4950 7300
+	4750 7400 4850 7300
 Entry Wire Line
-	4850 7500 4950 7400
-Text Label 4700 7400 0    50   ~ 0
+	4750 7500 4850 7400
+Text Label 4600 7400 0    50   ~ 0
 d0
-Text Label 4700 7500 0    50   ~ 0
+Text Label 4600 7500 0    50   ~ 0
 d1
-NoConn ~ 4650 6600
-NoConn ~ 4650 6700
-Wire Bus Line
-	4950 5400 5200 5400
+NoConn ~ 4550 6600
+NoConn ~ 4550 6700
 Connection ~ 5200 5400
-Text Notes 4215 6835 0    50   ~ 0
+Text Notes 4115 6835 0    50   ~ 0
 PD2
-Text Notes 4215 6935 0    50   ~ 0
+Text Notes 4115 6935 0    50   ~ 0
 PD3
-Text Notes 4215 7035 0    50   ~ 0
+Text Notes 4115 7035 0    50   ~ 0
 PD4
-Text Notes 4215 7135 0    50   ~ 0
+Text Notes 4115 7135 0    50   ~ 0
 PD5
-Text Notes 4215 7235 0    50   ~ 0
+Text Notes 4115 7235 0    50   ~ 0
 PD6
-Text Notes 4215 7335 0    50   ~ 0
+Text Notes 4115 7335 0    50   ~ 0
 PD7
-Text Notes 4215 7435 0    50   ~ 0
+Text Notes 4115 7435 0    50   ~ 0
 PB0
-Text Notes 4215 7535 0    50   ~ 0
+Text Notes 4115 7535 0    50   ~ 0
 PB1
-Text Notes 4215 7635 0    50   ~ 0
+Text Notes 4115 7635 0    50   ~ 0
 PB2
-Text Notes 4215 7735 0    50   ~ 0
+Text Notes 4115 7735 0    50   ~ 0
 PB3
-Text Notes 4215 7835 0    50   ~ 0
+Text Notes 4115 7835 0    50   ~ 0
 PB4
-Text Notes 4215 7935 0    50   ~ 0
+Text Notes 4115 7935 0    50   ~ 0
 PB5
-Text Notes 3880 7235 0    50   ~ 0
+Text Notes 3780 7235 0    50   ~ 0
 PC0
-Text Notes 3880 7335 0    50   ~ 0
+Text Notes 3780 7335 0    50   ~ 0
 PC1
-Text Notes 3880 7435 0    50   ~ 0
+Text Notes 3780 7435 0    50   ~ 0
 PC2
-Text Notes 3880 7535 0    50   ~ 0
+Text Notes 3780 7535 0    50   ~ 0
 PC3
-Text Notes 3880 7635 0    50   ~ 0
+Text Notes 3780 7635 0    50   ~ 0
 PC4
-Text Notes 3880 7735 0    50   ~ 0
+Text Notes 3780 7735 0    50   ~ 0
 PC5
-NoConn ~ 3650 7900
-NoConn ~ 3650 7800
-NoConn ~ 3650 7000
-NoConn ~ 3650 6700
-NoConn ~ 3650 6600
-NoConn ~ 4050 6200
+NoConn ~ 3550 7900
+NoConn ~ 3550 7800
+NoConn ~ 3550 7000
+NoConn ~ 3550 6700
+NoConn ~ 3550 6600
 NoConn ~ 3950 6200
+NoConn ~ 3850 6200
 $Comp
 L power:+5V #PWR017
 U 1 1 6155DEAC
-P 4250 6200
-F 0 "#PWR017" H 4250 6050 50  0001 C CNN
-F 1 "+5V" H 4265 6373 50  0000 C CNN
-F 2 "" H 4250 6200 50  0001 C CNN
-F 3 "" H 4250 6200 50  0001 C CNN
-	1    4250 6200
+P 4150 6200
+F 0 "#PWR017" H 4150 6050 50  0001 C CNN
+F 1 "+5V" H 4165 6373 50  0000 C CNN
+F 2 "" H 4150 6200 50  0001 C CNN
+F 3 "" H 4150 6200 50  0001 C CNN
+	1    4150 6200
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR018
 U 1 1 6155FAE3
-P 4150 8275
-F 0 "#PWR018" H 4150 8025 50  0001 C CNN
-F 1 "GND" H 4155 8102 50  0000 C CNN
-F 2 "" H 4150 8275 50  0001 C CNN
-F 3 "" H 4150 8275 50  0001 C CNN
-	1    4150 8275
+P 4050 8275
+F 0 "#PWR018" H 4050 8025 50  0001 C CNN
+F 1 "GND" H 4055 8102 50  0000 C CNN
+F 2 "" H 4050 8275 50  0001 C CNN
+F 3 "" H 4050 8275 50  0001 C CNN
+	1    4050 8275
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4050 8200 4150 8200
+	3950 8200 4050 8200
 Wire Wire Line
-	4150 8200 4150 8275
-Connection ~ 4150 8200
-$Comp
-L 74xx:74HC595 U7
-U 1 1 6157432B
-P 2525 6800
-F 0 "U7" H 2275 7350 50  0000 C CNN
-F 1 "74HC595" V 2525 6700 50  0000 C CNN
-F 2 "" H 2525 6800 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 2525 6800 50  0001 C CNN
-	1    2525 6800
-	-1   0    0    -1  
-$EndComp
-Text Notes 2425 7175 0    50   ~ 0
-SRLO
-Text Notes 2450 8775 0    50   ~ 0
-SRHI
+	4050 8200 4050 8275
+Connection ~ 4050 8200
 Wire Wire Line
-	2925 6900 3200 6900
+	4550 7700 4825 7700
 Wire Wire Line
-	3200 6900 3200 7500
+	4550 7900 4725 7900
 Wire Wire Line
-	3200 7500 3650 7500
+	4825 7700 4825 8700
 Wire Wire Line
-	2925 8500 3200 8500
-Wire Wire Line
-	3200 8500 3200 7600
-Wire Wire Line
-	3200 7600 3650 7600
-Wire Wire Line
-	4650 7700 4925 7700
-Wire Wire Line
-	4650 7900 4825 7900
-Wire Wire Line
-	2925 6400 3400 6400
-Wire Wire Line
-	3400 8700 4925 8700
-Wire Wire Line
-	4925 7700 4925 8700
-Wire Wire Line
-	2925 6600 3300 6600
-Wire Wire Line
-	3300 6600 3300 8200
-Wire Wire Line
-	3300 8600 4825 8600
-Wire Wire Line
-	4825 7900 4825 8600
-Wire Wire Line
-	2925 8200 3300 8200
-Connection ~ 3300 8200
-Wire Wire Line
-	3300 8200 3300 8600
-Text GLabel 2925 6700 2    50   Input ~ 0
-H
-Text GLabel 2925 8300 2    50   Input ~ 0
-H
-Wire Wire Line
-	3650 7400 3100 7400
-Wire Wire Line
-	3100 7400 3100 7000
-Wire Wire Line
-	3100 7000 2925 7000
-Wire Wire Line
-	2925 8600 3100 8600
-Wire Wire Line
-	3100 8600 3100 7400
-Connection ~ 3100 7400
-$Comp
-L 74xx:74HC595 U8
-U 1 1 6157968C
-P 2525 8400
-F 0 "U8" H 2275 8950 50  0000 C CNN
-F 1 "74HC595" V 2525 8300 50  0000 C CNN
-F 2 "" H 2525 8400 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 2525 8400 50  0001 C CNN
-	1    2525 8400
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	3400 6400 3400 8700
-Wire Wire Line
-	2125 7300 2025 7300
-Wire Wire Line
-	2025 7300 2025 7650
-Wire Wire Line
-	2025 7650 2925 7650
-Wire Wire Line
-	2925 7650 2925 8000
-NoConn ~ 2125 8900
-Entry Wire Line
-	1925 6400 1825 6300
-Entry Wire Line
-	1925 6500 1825 6400
-Entry Wire Line
-	1925 6600 1825 6500
-Entry Wire Line
-	1925 6700 1825 6600
-Entry Wire Line
-	1925 6800 1825 6700
-Entry Wire Line
-	1925 6900 1825 6800
-Entry Wire Line
-	1925 7000 1825 6900
-Entry Wire Line
-	1925 7100 1825 7000
-Entry Wire Line
-	1925 8000 1825 7900
-Entry Wire Line
-	1925 8100 1825 8000
-Entry Wire Line
-	1925 8200 1825 8100
-Entry Wire Line
-	1925 8300 1825 8200
-Entry Wire Line
-	1925 8400 1825 8300
-Entry Wire Line
-	1925 8500 1825 8400
-Entry Wire Line
-	1925 8600 1825 8500
-Entry Wire Line
-	1925 8700 1825 8600
-Wire Wire Line
-	1925 6400 2125 6400
-Wire Wire Line
-	1925 6500 2125 6500
-Wire Wire Line
-	1925 6600 2125 6600
-Wire Wire Line
-	1925 8600 2125 8600
-Wire Wire Line
-	1925 8500 2125 8500
-Wire Wire Line
-	1925 8400 2125 8400
-Wire Wire Line
-	1925 8300 2125 8300
-Wire Wire Line
-	1925 8200 2125 8200
-Wire Wire Line
-	1925 8100 2125 8100
-Wire Wire Line
-	1925 8000 2125 8000
-Wire Wire Line
-	1925 7100 2125 7100
-Wire Wire Line
-	1925 7000 2125 7000
-Wire Wire Line
-	1925 6900 2125 6900
-Wire Wire Line
-	1925 6800 2125 6800
-Wire Wire Line
-	1925 6700 2125 6700
-Text Label 1975 6500 0    50   ~ 0
-a1
-Text Label 1975 6600 0    50   ~ 0
-a2
-Text Label 1975 6700 0    50   ~ 0
-a3
-Text Label 1975 6400 0    50   ~ 0
-a0
-Text Label 1975 8400 0    50   ~ 0
-a12
-Text Label 1975 8500 0    50   ~ 0
-a13
-Text Label 1975 8600 0    50   ~ 0
-a14
-Text Label 1975 8700 0    50   ~ 0
-a15
-Text Label 1975 6800 0    50   ~ 0
-a4
-Text Label 1975 6900 0    50   ~ 0
-a5
-Text Label 1975 7000 0    50   ~ 0
-a6
-Text Label 1975 7100 0    50   ~ 0
-a7
-Text Label 1975 8000 0    50   ~ 0
-a8
-Text Label 1975 8100 0    50   ~ 0
-a9
-Text Label 1975 8200 0    50   ~ 0
-a10
-Text Label 1975 8300 0    50   ~ 0
-a11
-Wire Wire Line
-	1925 8700 2125 8700
-Wire Bus Line
-	1825 1150 5200 1150
+	4725 7900 4725 8600
 Connection ~ 5200 1150
+Text Label 3675 8600 0    50   ~ 0
+MISO_SRLO_SER
+Text Label 3675 8700 0    50   ~ 0
+SCK_SR_SRCLK
+Wire Wire Line
+	3550 7300 3400 7300
+Wire Wire Line
+	3550 7200 3450 7200
+Wire Wire Line
+	3400 5825 3400 7300
+Wire Wire Line
+	3450 5875 3450 7200
+Text Label 7750 5075 2    50   ~ 0
+PC0_ROM_~WE~
 $Comp
-L power:+5V #PWR013
-U 1 1 617C717A
-P 2525 6200
-F 0 "#PWR013" H 2525 6050 50  0001 C CNN
-F 1 "+5V" H 2575 6200 50  0000 C CNN
-F 2 "" H 2525 6200 50  0001 C CNN
-F 3 "" H 2525 6200 50  0001 C CNN
-	1    2525 6200
-	1    0    0    -1  
+L Device:R R3
+U 1 1 61A072FD
+P 7600 4900
+F 0 "R3" V 7393 4900 50  0000 C CNN
+F 1 "R" V 7484 4900 50  0000 C CNN
+F 2 "" V 7530 4900 50  0001 C CNN
+F 3 "~" H 7600 4900 50  0001 C CNN
+	1    7600 4900
+	0    1    1    0   
 $EndComp
+Text Label 7825 5075 0    50   ~ 0
+PC1_ROM_~OE~
+Text GLabel 7450 4900 0    50   Input ~ 0
+H
+Text GLabel 8125 4900 2    50   Input ~ 0
+L
+Text Notes 7750 5175 2    50   ~ 0
+Default Off
+Text Notes 7825 5175 0    50   ~ 0
+Default On\n
+Connection ~ 14100 8575
+Wire Wire Line
+	3700 1825 3475 1825
+Wire Wire Line
+	3075 1825 2925 1825
 $Comp
-L power:+5V #PWR015
-U 1 1 617C7BA2
-P 2525 7800
-F 0 "#PWR015" H 2525 7650 50  0001 C CNN
-F 1 "+5V" H 2575 7800 50  0000 C CNN
-F 2 "" H 2525 7800 50  0001 C CNN
-F 3 "" H 2525 7800 50  0001 C CNN
-	1    2525 7800
+L Device:R R2
+U 1 1 6069021B
+P 3100 3325
+F 0 "R2" V 2875 3275 50  0000 L CNN
+F 1 "R" V 2975 3300 50  0000 L CNN
+F 2 "" V 3030 3325 50  0001 C CNN
+F 3 "~" H 3100 3325 50  0001 C CNN
+	1    3100 3325
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3250 3325 3350 3325
+$Comp
+L power:GND #PWR016
+U 1 1 617C911C
+P 2425 9100
+F 0 "#PWR016" H 2425 8850 50  0001 C CNN
+F 1 "GND" H 2525 9100 50  0000 C CNN
+F 2 "" H 2425 9100 50  0001 C CNN
+F 3 "" H 2425 9100 50  0001 C CNN
+	1    2425 9100
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR014
 U 1 1 617C8689
-P 2525 7500
-F 0 "#PWR014" H 2525 7250 50  0001 C CNN
-F 1 "GND" H 2625 7500 50  0000 C CNN
-F 2 "" H 2525 7500 50  0001 C CNN
-F 3 "" H 2525 7500 50  0001 C CNN
-	1    2525 7500
+P 2425 7500
+F 0 "#PWR014" H 2425 7250 50  0001 C CNN
+F 1 "GND" H 2525 7500 50  0000 C CNN
+F 2 "" H 2425 7500 50  0001 C CNN
+F 3 "" H 2425 7500 50  0001 C CNN
+	1    2425 7500
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR016
-U 1 1 617C911C
-P 2525 9100
-F 0 "#PWR016" H 2525 8850 50  0001 C CNN
-F 1 "GND" H 2625 9100 50  0000 C CNN
-F 2 "" H 2525 9100 50  0001 C CNN
-F 3 "" H 2525 9100 50  0001 C CNN
-	1    2525 9100
+L power:+5V #PWR015
+U 1 1 617C7BA2
+P 2425 7800
+F 0 "#PWR015" H 2425 7650 50  0001 C CNN
+F 1 "+5V" H 2475 7800 50  0000 C CNN
+F 2 "" H 2425 7800 50  0001 C CNN
+F 3 "" H 2425 7800 50  0001 C CNN
+	1    2425 7800
 	1    0    0    -1  
 $EndComp
-NoConn ~ 4650 7600
-NoConn ~ 4650 7800
-Text Label 3775 8600 0    50   ~ 0
-MISO_SR_SER
-Text Label 3775 8700 0    50   ~ 0
-SCK_SR_SRCLK
+$Comp
+L power:+5V #PWR013
+U 1 1 617C717A
+P 2425 6200
+F 0 "#PWR013" H 2425 6050 50  0001 C CNN
+F 1 "+5V" H 2475 6200 50  0000 C CNN
+F 2 "" H 2425 6200 50  0001 C CNN
+F 3 "" H 2425 6200 50  0001 C CNN
+	1    2425 6200
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	3650 7300 3500 7300
+	1825 8700 2025 8700
+Text Label 1875 8300 0    50   ~ 0
+a11
+Text Label 1875 8200 0    50   ~ 0
+a10
+Text Label 1875 8100 0    50   ~ 0
+a9
+Text Label 1875 8000 0    50   ~ 0
+a8
+Text Label 1875 7100 0    50   ~ 0
+a7
+Text Label 1875 7000 0    50   ~ 0
+a6
+Text Label 1875 6900 0    50   ~ 0
+a5
+Text Label 1875 6800 0    50   ~ 0
+a4
+Text Label 1875 8700 0    50   ~ 0
+a15
+Text Label 1875 8600 0    50   ~ 0
+a14
+Text Label 1875 8500 0    50   ~ 0
+a13
+Text Label 1875 8400 0    50   ~ 0
+a12
+Text Label 1875 6400 0    50   ~ 0
+a0
+Text Label 1875 6700 0    50   ~ 0
+a3
+Text Label 1875 6600 0    50   ~ 0
+a2
+Text Label 1875 6500 0    50   ~ 0
+a1
 Wire Wire Line
-	3650 7200 3550 7200
+	1825 6700 2025 6700
 Wire Wire Line
-	3500 5825 7750 5825
+	1825 6800 2025 6800
 Wire Wire Line
-	3500 5825 3500 7300
+	1825 6900 2025 6900
 Wire Wire Line
-	3550 5875 7825 5875
+	1825 7000 2025 7000
 Wire Wire Line
-	3550 5875 3550 7200
+	1825 7100 2025 7100
 Wire Wire Line
-	7750 3375 7950 3375
+	1825 8000 2025 8000
 Wire Wire Line
-	7825 3475 7950 3475
-Text Label 7825 5200 0    50   ~ 0
-ROM_WEB
+	1825 8100 2025 8100
+Wire Wire Line
+	1825 8200 2025 8200
+Wire Wire Line
+	1825 8300 2025 8300
+Wire Wire Line
+	1825 8400 2025 8400
+Wire Wire Line
+	1825 8500 2025 8500
+Wire Wire Line
+	1825 8600 2025 8600
+Wire Wire Line
+	1825 6600 2025 6600
+Wire Wire Line
+	1825 6500 2025 6500
+Wire Wire Line
+	1825 6400 2025 6400
+Entry Wire Line
+	1825 8700 1725 8600
+Entry Wire Line
+	1825 8600 1725 8500
+Entry Wire Line
+	1825 8500 1725 8400
+Entry Wire Line
+	1825 8400 1725 8300
+Entry Wire Line
+	1825 8300 1725 8200
+Entry Wire Line
+	1825 8200 1725 8100
+Entry Wire Line
+	1825 8100 1725 8000
+Entry Wire Line
+	1825 8000 1725 7900
+Entry Wire Line
+	1825 7100 1725 7000
+Entry Wire Line
+	1825 7000 1725 6900
+Entry Wire Line
+	1825 6900 1725 6800
+Entry Wire Line
+	1825 6800 1725 6700
+Entry Wire Line
+	1825 6700 1725 6600
+Entry Wire Line
+	1825 6600 1725 6500
+Entry Wire Line
+	1825 6500 1725 6400
+Entry Wire Line
+	1825 6400 1725 6300
+NoConn ~ 2025 8900
+Wire Wire Line
+	2825 7650 2825 8000
+Wire Wire Line
+	1925 7650 2825 7650
+Wire Wire Line
+	1925 7300 1925 7650
+Wire Wire Line
+	2025 7300 1925 7300
+Wire Wire Line
+	3225 6400 3225 8700
+$Comp
+L 74xx:74HC595 U8
+U 1 1 6157968C
+P 2425 8400
+F 0 "U8" H 2175 8950 50  0000 C CNN
+F 1 "74HC595" V 2425 8300 50  0000 C CNN
+F 2 "" H 2425 8400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 2425 8400 50  0001 C CNN
+	1    2425 8400
+	-1   0    0    -1  
+$EndComp
+Connection ~ 3000 7400
+Wire Wire Line
+	3000 8600 3000 7400
+Wire Wire Line
+	2825 8600 3000 8600
+Wire Wire Line
+	3000 7000 2825 7000
+Wire Wire Line
+	3000 7400 3000 7000
+Wire Wire Line
+	3550 7400 3000 7400
+Text GLabel 2825 8300 2    50   Input ~ 0
+H
+Text GLabel 2825 6700 2    50   Input ~ 0
+H
+Wire Wire Line
+	3150 8200 3150 8600
+Connection ~ 3150 8200
+Wire Wire Line
+	2825 8200 3150 8200
+Wire Wire Line
+	3150 8600 4725 8600
+Wire Wire Line
+	3150 6600 3150 8200
+Wire Wire Line
+	2825 6600 3150 6600
+Wire Wire Line
+	3225 8700 4825 8700
+Wire Wire Line
+	2825 6400 3225 6400
+Wire Wire Line
+	3075 7600 3550 7600
+Wire Wire Line
+	3075 8500 3075 7600
+Wire Wire Line
+	2825 8500 3075 8500
+Wire Wire Line
+	3075 7500 3550 7500
+Wire Wire Line
+	3075 6900 3075 7500
+Wire Wire Line
+	2825 6900 3075 6900
+Text Notes 2350 8775 0    50   ~ 0
+SRHI
+Text Notes 2325 7175 0    50   ~ 0
+SRLO
+$Comp
+L 74xx:74HC595 U7
+U 1 1 6157432B
+P 2425 6800
+F 0 "U7" H 2175 7350 50  0000 C CNN
+F 1 "74HC595" V 2425 6700 50  0000 C CNN
+F 2 "" H 2425 6800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 2425 6800 50  0001 C CNN
+	1    2425 6800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 7800 4950 7800
+Wire Wire Line
+	4950 7800 4950 5675
+Wire Wire Line
+	3700 4225 3700 4075
+Wire Wire Line
+	3725 4075 3700 4075
+Wire Wire Line
+	3700 3425 3600 3425
+Wire Wire Line
+	3600 3425 3600 5575
+Wire Wire Line
+	4550 7600 4900 7600
+Wire Wire Line
+	4900 7600 4900 5575
+Wire Wire Line
+	3600 5575 4900 5575
+Connection ~ 4950 5675
+Wire Wire Line
+	4950 5675 9175 5675
+Wire Bus Line
+	4850 5400 5200 5400
+Wire Wire Line
+	3400 5825 7825 5825
+Wire Wire Line
+	3550 7700 3350 7700
+Wire Wire Line
+	3350 7700 3350 3325
+Connection ~ 3350 3325
+Wire Wire Line
+	3350 3325 3700 3325
+$Comp
+L Device:R R?
+U 1 1 61FB3C6F
+P 3100 3425
+F 0 "R?" V 2875 3375 50  0000 L CNN
+F 1 "R" V 2975 3400 50  0000 L CNN
+F 2 "" V 3030 3425 50  0001 C CNN
+F 3 "~" H 3100 3425 50  0001 C CNN
+	1    3100 3425
+	0    -1   -1   0   
+$EndComp
+Text GLabel 2950 3425 0    50   Input ~ 0
+H
+Wire Wire Line
+	3600 3425 3250 3425
+Connection ~ 3600 3425
+Text Label 3500 2000 2    50   ~ 0
+~RESET~
+Text Label 3450 2250 2    50   ~ 0
+CLOCK
+Text Label 3400 2925 2    50   ~ 0
+~IRQ~
+Text Label 3350 4825 2    50   ~ 0
+RDY
+Text Label 3600 4825 0    50   ~ 0
+BE
+Text Label 1975 7650 0    50   ~ 0
+SRHI_SER
+Text Label 2875 6900 0    50   ~ 0
+SRHI_RCLK
+Text Label 2875 8500 0    50   ~ 0
+SRLO_RCLK
+Text Label 2875 8600 0    50   ~ 0
+SR_~OE~
+Text Notes 1775 9750 0    50   ~ 0
+\n\n- PB2/D10/SS\n- PB4/D12/MISO\n- PC5/A5
+Wire Wire Line
+	3450 5875 7750 5875
 $Comp
 L Device:R R5
 U 1 1 61A06354
-P 7975 5050
-F 0 "R5" V 7768 5050 50  0000 C CNN
-F 1 "R" V 7859 5050 50  0000 C CNN
-F 2 "" V 7905 5050 50  0001 C CNN
-F 3 "~" H 7975 5050 50  0001 C CNN
-	1    7975 5050
+P 7975 4900
+F 0 "R5" V 7768 4900 50  0000 C CNN
+F 1 "R" V 7859 4900 50  0000 C CNN
+F 2 "" V 7905 4900 50  0001 C CNN
+F 3 "~" H 7975 4900 50  0001 C CNN
+	1    7975 4900
 	0    1    1    0   
 $EndComp
-$Comp
-L Device:R R3
-U 1 1 61A072FD
-P 7600 5050
-F 0 "R3" V 7393 5050 50  0000 C CNN
-F 1 "R" V 7484 5050 50  0000 C CNN
-F 2 "" V 7530 5050 50  0001 C CNN
-F 3 "~" H 7600 5050 50  0001 C CNN
-	1    7600 5050
-	0    1    1    0   
-$EndComp
-Text Label 7750 5200 2    50   ~ 0
-ROM_OEB
-Connection ~ 7825 5050
 Wire Wire Line
-	7825 5050 7825 3475
-Connection ~ 7750 5050
+	7825 3475 7825 4900
 Wire Wire Line
-	7750 5050 7750 3375
+	7750 3375 7950 3375
 Wire Wire Line
-	7750 5050 7750 5825
+	7750 3375 7750 4900
 Wire Wire Line
-	7825 5050 7825 5875
-Text GLabel 7450 5050 0    50   Input ~ 0
-H
-Text GLabel 8125 5050 2    50   Input ~ 0
-L
-Text Notes 8250 5300 2    50   ~ 0
-Default Off
-Text Notes 7325 5300 0    50   ~ 0
-Default On\n
-NoConn ~ 3650 7700
-Connection ~ 14100 8575
+	7825 3475 7950 3475
+Connection ~ 7750 4900
+Wire Wire Line
+	7750 4900 7750 5875
+Connection ~ 7825 4900
+Wire Wire Line
+	7825 4900 7825 5825
+Wire Bus Line
+	1725 1150 5200 1150
+Wire Notes Line
+	1500 5950 5125 5950
+Wire Notes Line
+	5125 5950 5125 10575
+Wire Notes Line
+	5125 10575 1500 10575
+Wire Notes Line
+	1500 10575 1500 5950
+Text Notes 1725 10325 0    50   ~ 0
+\n\n- PC0/A0\n- PC1/A1\n- a15
+Text Notes 2650 9900 0    50   ~ 0
+SR Control\n\nSER/LO\nSRCLK\n~OE~\nRCLK/LO\nRCLK/HI\n
 Wire Bus Line
 	9450 1150 9450 2825
 Wire Bus Line
-	4950 5400 4950 7400
+	4850 5400 4850 7400
 Wire Bus Line
 	7175 1875 7175 5400
 Wire Bus Line
@@ -1766,9 +1835,17 @@ Wire Bus Line
 Wire Bus Line
 	7600 1150 7600 3075
 Wire Bus Line
-	1825 1150 1825 8600
+	1725 1150 1725 8600
 Wire Bus Line
 	5550 1150 5550 3175
 Wire Bus Line
 	5200 1150 5200 3225
+Text Notes 3025 9900 0    50   ~ 0
+\n\n- PB3/D11/MOSI\n- PB5/D13/SCK\n- PC2/A2\n- PC3/A3\n- PC4/A4\n
+Text Notes 1575 10325 0    50   ~ 0
+EEPROM Control\n\n~WE~\n~OE~\n~CE~
+Text Notes 1575 9750 0    50   ~ 0
+Bus Control\n\nBE\n~RES~\nRDY
+Text Notes 1800 6050 0    50   ~ 0
+Integrated EEPROM Writer
 $EndSCHEMATC
