@@ -1137,7 +1137,7 @@ Wire Wire Line
 Wire Wire Line
 	8150 2000 7775 2000
 NoConn ~ 4650 6700
-Text GLabel 2925 6650 0    50   Input ~ 0
+Text GLabel 3875 6600 0    50   Input ~ 0
 H
 Wire Wire Line
 	3875 6600 4050 6600
@@ -1307,6 +1307,9 @@ Wire Wire Line
 	9350 3600 9500 3600
 Wire Wire Line
 	9500 3600 9500 5075
+Connection ~ 9500 5075
+Wire Wire Line
+	9500 5075 9575 5075
 Wire Bus Line
 	7850 1025 7850 2700
 Wire Bus Line
@@ -1323,7 +1326,4 @@ Wire Bus Line
 	3950 1025 3950 3050
 Wire Bus Line
 	3600 1025 3600 3100
-Connection ~ 9500 5075
-Wire Wire Line
-	9500 5075 9575 5075
 $EndSCHEMATC
