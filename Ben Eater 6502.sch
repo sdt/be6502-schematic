@@ -1744,10 +1744,10 @@ Connection ~ 3350 3325
 Wire Wire Line
 	3350 3325 3700 3325
 $Comp
-L Device:R R?
+L Device:R R6
 U 1 1 61FB3C6F
 P 3100 3425
-F 0 "R?" V 2875 3375 50  0000 L CNN
+F 0 "R6" V 2875 3375 50  0000 L CNN
 F 1 "R" V 2975 3400 50  0000 L CNN
 F 2 "" V 3030 3425 50  0001 C CNN
 F 3 "~" H 3100 3425 50  0001 C CNN
@@ -1816,10 +1816,95 @@ Wire Notes Line
 	5125 10575 1500 10575
 Wire Notes Line
 	1500 10575 1500 5950
-Text Notes 1725 10325 0    50   ~ 0
+Text Notes 1725 10350 0    50   ~ 0
 \n\n- PC0/A0\n- PC1/A1\n- a15
-Text Notes 2650 9900 0    50   ~ 0
+Text Notes 2350 10500 0    50   ~ 0
 SR Control\n\nSER/LO\nSRCLK\n~OE~\nRCLK/LO\nRCLK/HI\n
+Text Notes 2725 10500 0    50   ~ 0
+\n\n- PB3/D11/MOSI\n- PB5/D13/SCK\n- PC2/A2\n- PC3/A3\n- PC4/A4\n
+Text Notes 1575 10350 0    50   ~ 0
+EEPROM Control\n\n~WE~\n~OE~\n~CE~
+Text Notes 1575 9750 0    50   ~ 0
+Bus Control\n\nBE\n~RES~\nRDY
+Text Notes 1800 6050 0    50   ~ 0
+Integrated EEPROM Writer
+$Comp
+L Device:R R8
+U 1 1 611B3071
+P 4375 9400
+F 0 "R8" V 4275 9350 50  0000 L CNN
+F 1 "47K" V 4450 9350 50  0000 L CNN
+F 2 "" V 4305 9400 50  0001 C CNN
+F 3 "~" H 4375 9400 50  0001 C CNN
+	1    4375 9400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 6121FF36
+P 3875 10050
+F 0 "R7" H 3725 10050 50  0000 L CNN
+F 1 "1K" H 3925 10050 50  0000 L CNN
+F 2 "" V 3805 10050 50  0001 C CNN
+F 3 "~" H 3875 10050 50  0001 C CNN
+	1    3875 10050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 7600 4900 9400
+Wire Wire Line
+	4900 9400 4525 9400
+Connection ~ 4900 7600
+$Comp
+L power:+5V #PWR019
+U 1 1 61246594
+P 3875 9125
+F 0 "#PWR019" H 3875 8975 50  0001 C CNN
+F 1 "+5V" H 3890 9298 50  0000 C CNN
+F 2 "" H 3875 9125 50  0001 C CNN
+F 3 "" H 3875 9125 50  0001 C CNN
+	1    3875 9125
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR020
+U 1 1 6128DE47
+P 3875 10200
+F 0 "#PWR020" H 3875 9950 50  0001 C CNN
+F 1 "GND" H 3880 10027 50  0000 C CNN
+F 2 "" H 3875 10200 50  0001 C CNN
+F 3 "" H 3875 10200 50  0001 C CNN
+	1    3875 10200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 612218DD
+P 3875 9750
+F 0 "D1" V 3925 9925 50  0000 R CNN
+F 1 "LED" V 3825 9975 50  0000 R CNN
+F 2 "" H 3875 9750 50  0001 C CNN
+F 3 "~" H 3875 9750 50  0001 C CNN
+	1    3875 9750
+	0    -1   -1   0   
+$EndComp
+Text Notes 4075 9875 0    50   ~ 0
+~BE~ Indicator\n\nLED on when BE is low
+$Comp
+L Transistor_BJT:2N3906 Q1
+U 1 1 611EE16B
+P 3975 9400
+F 0 "Q1" H 4166 9354 50  0000 L CNN
+F 1 "2N3906" H 4166 9445 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4175 9325 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3906-D.PDF" H 3975 9400 50  0001 L CNN
+	1    3975 9400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3875 9125 3875 9200
+Wire Wire Line
+	4175 9400 4225 9400
 Wire Bus Line
 	9450 1150 9450 2825
 Wire Bus Line
@@ -1840,12 +1925,4 @@ Wire Bus Line
 	5550 1150 5550 3175
 Wire Bus Line
 	5200 1150 5200 3225
-Text Notes 3025 9900 0    50   ~ 0
-\n\n- PB3/D11/MOSI\n- PB5/D13/SCK\n- PC2/A2\n- PC3/A3\n- PC4/A4\n
-Text Notes 1575 10325 0    50   ~ 0
-EEPROM Control\n\n~WE~\n~OE~\n~CE~
-Text Notes 1575 9750 0    50   ~ 0
-Bus Control\n\nBE\n~RES~\nRDY
-Text Notes 1800 6050 0    50   ~ 0
-Integrated EEPROM Writer
 $EndSCHEMATC
