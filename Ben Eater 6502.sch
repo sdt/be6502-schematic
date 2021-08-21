@@ -1439,9 +1439,9 @@ Wire Wire Line
 Wire Wire Line
 	4725 7900 4725 8600
 Connection ~ 5200 1150
-Text Label 3675 8600 0    50   ~ 0
-MISO_SRLO_SER
 Text Label 3675 8700 0    50   ~ 0
+MOSI_SRLO_SER
+Text Label 3675 8600 0    50   ~ 0
 SCK_SR_SRCLK
 Wire Wire Line
 	3550 7300 3400 7300
@@ -1772,9 +1772,9 @@ BE
 Text Label 1975 7650 0    50   ~ 0
 SRHI_SER
 Text Label 2875 6900 0    50   ~ 0
-SRHI_RCLK
-Text Label 2875 8500 0    50   ~ 0
 SRLO_RCLK
+Text Label 2875 8500 0    50   ~ 0
+SRHI_RCLK
 Text Label 2875 8600 0    50   ~ 0
 SR_~OE~
 Text Notes 1775 9750 0    50   ~ 0
