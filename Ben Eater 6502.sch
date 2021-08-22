@@ -4,7 +4,7 @@ EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 1
-Title "Ben Eater 6502 - Stage 7"
+Title "Ben Eater 6502 - Stage 8"
 Date "2021-03-22"
 Rev ""
 Comp ""
@@ -21,31 +21,25 @@ NoConn ~ 3700 2225
 $Comp
 L Switch:SW_Push SW1
 U 1 1 6058FD77
-P 3275 1825
-F 0 "SW1" H 3275 2110 50  0000 C CNN
-F 1 "Reset" H 3275 2019 50  0000 C CNN
-F 2 "" H 3275 2025 50  0001 C CNN
-F 3 "~" H 3275 2025 50  0001 C CNN
-	1    3275 1825
-	1    0    0    -1  
+P 5975 7400
+F 0 "SW1" H 5975 7685 50  0000 C CNN
+F 1 "Reset" H 5975 7594 50  0000 C CNN
+F 2 "" H 5975 7600 50  0001 C CNN
+F 3 "~" H 5975 7600 50  0001 C CNN
+	1    5975 7400
+	0    -1   -1   0   
 $EndComp
-Text GLabel 2925 1825 0    50   Input ~ 0
-L
 $Comp
 L Device:R R1
 U 1 1 605910CF
-P 3700 1625
-F 0 "R1" H 3770 1671 50  0000 L CNN
-F 1 "10K" H 3770 1580 50  0000 L CNN
-F 2 "" V 3630 1625 50  0001 C CNN
-F 3 "~" H 3700 1625 50  0001 C CNN
-	1    3700 1625
+P 6250 7650
+F 0 "R1" H 6320 7696 50  0000 L CNN
+F 1 "10K" H 6320 7605 50  0000 L CNN
+F 2 "" V 6180 7650 50  0001 C CNN
+F 3 "~" H 6250 7650 50  0001 C CNN
+	1    6250 7650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3700 1400 3700 1475
-Wire Wire Line
-	3700 1775 3700 1825
 Text GLabel 3300 2125 0    50   Input ~ 0
 CLOCK
 Text GLabel 3725 4075 2    50   Input ~ 0
@@ -72,7 +66,6 @@ F 3 "" H 4300 4575 50  0001 C CNN
 	1    4300 4575
 	1    0    0    -1  
 $EndComp
-Connection ~ 3700 1825
 $Comp
 L 4xxx:4011 U2
 U 1 1 605E5160
@@ -86,12 +79,6 @@ F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4011bms-12bms
 $EndComp
 Wire Wire Line
 	3700 3025 3550 3025
-Wire Wire Line
-	3700 1825 3700 1925
-Wire Wire Line
-	3700 1925 3500 1925
-Wire Wire Line
-	3500 1925 3500 5675
 Wire Wire Line
 	3700 2125 3450 2125
 Connection ~ 3450 2125
@@ -593,10 +580,6 @@ Wire Wire Line
 	7900 4100 8175 4100
 Text GLabel 2950 3325 0    50   Input ~ 0
 H
-Text GLabel 3650 1400 0    50   Input ~ 0
-H
-Wire Wire Line
-	3700 1400 3650 1400
 $Comp
 L Display_Character:WC1602A DS1
 U 1 1 6067F661
@@ -1089,8 +1072,6 @@ Wire Wire Line
 	12000 5675 12000 5000
 Wire Wire Line
 	12000 5000 11475 5000
-Wire Wire Line
-	3500 5675 4950 5675
 Connection ~ 9175 5675
 Wire Wire Line
 	9175 5675 12000 5675
@@ -1475,10 +1456,6 @@ Default Off
 Text Notes 7825 5175 0    50   ~ 0
 Default On\n
 Connection ~ 14100 8575
-Wire Wire Line
-	3700 1825 3475 1825
-Wire Wire Line
-	3075 1825 2925 1825
 $Comp
 L Device:R R2
 U 1 1 6069021B
@@ -1712,10 +1689,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 2425 6800 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	4550 7800 4950 7800
-Wire Wire Line
-	4950 7800 4950 5675
-Wire Wire Line
 	3700 4225 3700 4075
 Wire Wire Line
 	3725 4075 3700 4075
@@ -1729,9 +1702,6 @@ Wire Wire Line
 	4900 7600 4900 5575
 Wire Wire Line
 	3600 5575 4900 5575
-Connection ~ 4950 5675
-Wire Wire Line
-	4950 5675 9175 5675
 Wire Bus Line
 	4850 5400 5200 5400
 Wire Wire Line
@@ -1759,7 +1729,7 @@ H
 Wire Wire Line
 	3600 3425 3250 3425
 Connection ~ 3600 3425
-Text Label 3500 2000 2    50   ~ 0
+Text Label 3500 1825 2    50   ~ 0
 ~RESET~
 Text Label 3450 2250 2    50   ~ 0
 CLOCK
@@ -1925,6 +1895,123 @@ Wire Wire Line
 	3000 9000 3000 9100
 Wire Wire Line
 	3000 9100 3075 9100
+$Comp
+L 74xx:74HC14 U9
+U 1 1 6124308A
+P 7000 7400
+F 0 "U9" H 7000 7717 50  0000 C CNN
+F 1 "74HC14" H 7000 7626 50  0000 C CNN
+F 2 "" H 7000 7400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74HC14" H 7000 7400 50  0001 C CNN
+	1    7000 7400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 1825 3700 1825
+Wire Wire Line
+	3500 1825 3500 5675
+$Comp
+L Device:R R11
+U 1 1 612925DE
+P 6550 7400
+F 0 "R11" V 6343 7400 50  0000 C CNN
+F 1 "5K1" V 6434 7400 50  0000 C CNN
+F 2 "" V 6480 7400 50  0001 C CNN
+F 3 "~" H 6550 7400 50  0001 C CNN
+	1    6550 7400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:CP C1
+U 1 1 61293C4F
+P 6250 7150
+F 0 "C1" H 6050 7200 50  0000 L CNN
+F 1 "4u7" H 6075 7025 50  0000 L CNN
+F 2 "" H 6288 7000 50  0001 C CNN
+F 3 "~" H 6250 7150 50  0001 C CNN
+	1    6250 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR021
+U 1 1 61295BBF
+P 6250 6825
+F 0 "#PWR021" H 6250 6675 50  0001 C CNN
+F 1 "+5V" H 6265 6998 50  0000 C CNN
+F 2 "" H 6250 6825 50  0001 C CNN
+F 3 "" H 6250 6825 50  0001 C CNN
+	1    6250 6825
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 61298039
+P 6250 7950
+F 0 "R10" H 6320 7996 50  0000 L CNN
+F 1 "47K" H 6320 7905 50  0000 L CNN
+F 2 "" V 6180 7950 50  0001 C CNN
+F 3 "~" H 6250 7950 50  0001 C CNN
+	1    6250 7950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 6900 6250 6825
+Wire Wire Line
+	6250 7000 6250 6900
+Connection ~ 6250 6900
+Wire Wire Line
+	6250 7300 6250 7400
+Wire Wire Line
+	6250 7400 6400 7400
+Wire Wire Line
+	5975 7200 5975 6900
+Wire Wire Line
+	5975 6900 6250 6900
+Wire Wire Line
+	5975 7600 5975 7800
+Wire Wire Line
+	5975 7800 6250 7800
+Connection ~ 6250 7800
+$Comp
+L power:GND #PWR022
+U 1 1 613E0528
+P 6250 8100
+F 0 "#PWR022" H 6250 7850 50  0001 C CNN
+F 1 "GND" H 6255 7927 50  0000 C CNN
+F 2 "" H 6250 8100 50  0001 C CNN
+F 3 "" H 6250 8100 50  0001 C CNN
+	1    6250 8100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 7500 6250 7400
+Connection ~ 6250 7400
+Wire Wire Line
+	4550 7800 5975 7800
+Wire Wire Line
+	3500 5675 7675 5675
+Connection ~ 5975 7800
+Wire Wire Line
+	7675 7400 7675 5675
+Wire Wire Line
+	7300 7400 7675 7400
+Connection ~ 7675 5675
+Wire Wire Line
+	7675 5675 9175 5675
+Text Label 5275 7800 0    50   ~ 0
+PB4_BUS_RES
+Wire Notes Line
+	5600 6375 7400 6375
+Wire Notes Line
+	7400 6375 7400 8375
+Wire Notes Line
+	7400 8375 5600 8375
+Wire Notes Line
+	5600 8375 5600 6375
+Text Notes 5650 6475 0    50   ~ 0
+Power-on Reset
+Text Notes 5650 6550 0    40   ~ 0
+https://wilsonminesco.com/6502primer/RSTreqs.html
 Wire Bus Line
 	9450 1150 9450 2825
 Wire Bus Line
